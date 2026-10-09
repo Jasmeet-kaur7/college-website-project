@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Horizon College</title>
+<style>
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 7%;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Logo */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+
+    background-color: #062b63;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-area h1 {
+    color: #062b63;
+    font-size: 22px;
+}
+
+.logo-area p {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #062b63;
+}
+
+
+/* Apply Button */
+
+.apply-button {
+    background-color: #062b63;
+    color: white !important;
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+}
+
+.apply-button:hover {
+    background-color: #0b438f;
+}
+
+/* ================= STUDENT INFORMATION ================= */
+
+.student-section {
+    background-color: #f5f7fa;
+
+    padding: 60px 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.student-container {
+    width: 900px;
+
+    background-color: white;
+
+    padding: 45px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+.student-container h2 {
+    text-align: center;
+
+    color: #062b63;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.form-intro {
+    text-align: center;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+/* Section Headings */
+
+.student-container h3 {
+    color: #062b63;
+
+    font-size: 20px;
+
+    margin-top: 25px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid #e5eaf0;
+}
+
+
+/* Form Grid */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Form Group */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #333;
+
+    margin-bottom: 8px;
+}
+
+
+/* Input Fields */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d5dce5;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+}
+
+
+/* Focus Effect */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #062b63;
+
+    box-shadow: 0 0 4px rgba(6, 43, 99, 0.15);
+}
+
+
+/* Textarea */
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* Gender */
+
+.gender-group {
+    margin-top: 5px;
+}
+
+.gender-options {
+    display: flex;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+.gender-options label {
+    font-weight: normal;
+
+    margin-bottom: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.gender-options input {
+    accent-color: #062b63;
+}
+
+
+/* Submit */
+
+.submit-area {
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+.submit-button {
+    background-color: #062b63;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 35px;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0b438f;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+    .student-container {
+        padding: 30px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-container h2 {
+        font-size: 25px;
+    }
+
+    .gender-options {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    width: 100%;
+    background-color: #062b63;
+    color: white;
+}
+
+
+/* Footer Main Area */
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 50px 7%;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+
+    gap: 40px;
+}
+
+
+/* Footer Columns */
+
+.footer-column h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer-column h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.footer-column p {
+    color: #d8e2f0;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+
+/* Footer Links */
+
+.footer-column a {
+    display: block;
+
+    color: #d8e2f0;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: #d4a72c;
+}
+
+
+/* Footer Bottom */
+
+.footer-bottom {
+    width: 100%;
+
+    background-color: #041e46;
+
+    text-align: center;
+
+    padding: 15px;
+
+    font-size: 13px;
+
+    color: #d8e2f0;
+}
+
+
+
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about,
+    .notices {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo-area">
+
+            <div class="logo">
+                HC
+            </div>
+
+            <div>
+                <h1>HORIZON COLLEGE</h1>
+                <p>Arts • Science • Commerce</p>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation Bar -->
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="sign in.html">Sign In</a>
+            <a href="register.html">Register</a>
+            <a href="contact.html">Contact</a>
+            <a href="Forget Password.html">Forget Password</a>
+
+        </nav>
+
+    </header>
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main>
+
+    <section class="student-section">
+
+        <div class="student-container">
+
+            <h2>Student Information Form</h2>
+
+            <p class="form-intro">
+                Please fill in the following details carefully to complete
+                your Horizon College admission application.
+            </p>
+
+            <form action="application-submitted.html" method="get">
+
+                <!-- ================= PERSONAL INFORMATION ================= -->
+
+                <h3>Personal Information</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="student-name">Student Name</label>
+                        <input
+                            type="text"
+                            id="student-name"
+                            name="student-name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="father-name">Father's Name</label>
+                        <input
+                            type="text"
+                            id="father-name"
+                            name="father-name"
+                            placeholder="Enter father's name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mother-name">Mother's Name</label>
+                        <input
+                            type="text"
+                            id="mother-name"
+                            name="mother-name"
+                            placeholder="Enter mother's name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- ================= GENDER ================= -->
+
+                <div class="form-group gender-group">
+
+                    <label>Gender</label>
+
+                    <div class="gender-options">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="male"
+                                required
+                            >
+                            Male
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="female"
+                            >
+                            Female
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="other"
+                            >
+                            Other
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= CONTACT INFORMATION ================= -->
+
+                <h3>Contact Information</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="mobile">Mobile Number</label>
+
+                        <input
+                            type="tel"
+                            id="mobile"
+                            name="mobile"
+                            placeholder="Enter mobile number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter email address"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="address">Address</label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="4"
+                        placeholder="Enter your complete address"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- ================= ACADEMIC INFORMATION ================= -->
+
+                <h3>Academic Information</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="course">Course</label>
+
+                        <select id="course" name="course" required>
+
+                            <option value="">Select Course</option>
+
+                            <option value="ba">
+                                Bachelor of Arts (BA)
+                            </option>
+
+                            <option value="bsc">
+                                Bachelor of Science (B.Sc.)
+                            </option>
+
+                            <option value="bcom">
+                                Bachelor of Commerce (B.Com.)
+                            </option>
+							
+                            <option value="B.P.ED">
+                                Bachelor of Physical Education (B.P.ED.)
+                            </option>							
+
+                            <option value="B.C.A.(II YEAR)">
+                                Bachelor of Computer Applications  (B.C.A.(II YEAR))
+                            </option>	
+
+                            <option value="B.C.A.(III YEAR)">
+                                Bachelor of Computer Applications  (B.C.A.(III YEAR))
+                            </option>
+
+                            <option value="B.Com.(II YEAR)">
+                                Bachelor of Commerce (B.COM.(II YEAR))
+                            </option>
+
+                            <option value="B.Com.(III YEAR)">
+                                Bachelor of Commerce (B.COM.(III YEAR))
+                            </option>
+
+                            <option value="B.B.A.(II YEAR)">
+                                Bachelor of Business Administration (B.B.A.(II YEAR))
+                            </option>
+
+                            <option value="B.B.A.(III YEAR)">
+                                Bachelor of Business Administration (B.B.A.(III YEAR))
+                            </option>	
+
+                            <option value="M.A.">
+                                Master of Arts (M.A.)
+                            </option>
+
+                            <option value="bsc">
+                                Bachelor of Science (B.Sc.)
+                            </option>			
+							
+							<option value="M.A.">
+                                Master of Arts (M.A.)
+                            </option>
+
+                            <option value="M. P. Ed.">
+                                Master of Physical Education  (M. P. Ed.)
+                            </option>
+							
+                            <option value="M.A.">
+                                Master of Arts (M.A.)
+                            </option>
+
+                            <option value="PG Diploma in Computer Applications">
+                                Post Graduate Diploma in Computer Applications
+                            </option>			
+							
+                            <option value="M.Sc.">
+                                Master of Science (M.SC.)
+                            </option>
+
+                            <option value="Ph.D.">
+                                Doctor of Philosophy(PH.D.)
+                            </option>		
+							
+                            <option value="PG Diploma in Cyber Crime">
+                                Post Graduate Diploma in Cyber Crime
+                            </option>
+
+							
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="qualification">
+                            Highest Qualification
+                        </label>
+
+                        <input
+                            type="text"
+                            id="qualification"
+                            name="qualification"
+                            placeholder="e.g. 12th Pass"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="marks10">
+                            10th Marks (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="marks10"
+                            name="marks10"
+                            placeholder="Enter percentage"
+                            min="0"
+                            max="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="marks12">
+                            12th Marks (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="marks12"
+                            name="marks12"
+                            placeholder="Enter percentage"
+                            min="0"
+                            max="100"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= SUBMIT ================= -->
+
+                <div class="submit-area">
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        Submit Application
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+
+
+  <!-- =================  FOOTER ================= -->
+
+			<footer>
+
+				<div class="footer-container">
+
+					<!-- College Information -->
+
+					<div class="footer-column">
+
+						<h2>HORIZON COLLEGE</h2>
+
+						<p>
+							Empowering Minds, Shaping Futures
+						</p>
+
+						<p>
+							Horizon College is committed to providing quality
+							education and creating opportunities for students
+							to build a successful future.
+						</p>
+
+					</div>
+
+
+					<!-- Quick Links -->
+
+					<div class="footer-column">
+
+						<h3>Quick Links</h3>
+
+						<a href="index.html">Home</a>
+
+						<a href="about.html">About Us</a>
+
+						<a href="courses.html">Courses</a>
+
+						<a href="admissions.html">Admissions</a>
+
+						<a href="contact.html">Contact Us</a>
+
+					</div>
+
+
+					<!-- Admission Links -->
+
+					<div class="footer-column">
+
+						<h3>Admissions</h3>
+
+						<a href="apply.html">Apply Now</a>
+
+						<a href="sign in.html">Student Sign In</a>
+
+						<a href="register.html">New Registration</a>
+
+						<a href="Forget Password.html">Forgot Password</a>
+
+					</div>
+
+
+					<!-- Contact Information -->
+
+					<div class="footer-column">
+
+						<h3>Contact Us</h3>
+
+						<p>📍 123 Academic Hub Street</p>
+
+						<p>Knowledge Enclave, Punjab, India</p>
+
+						<p>📞 +91 98765 43210</p>
+
+						<p>✉ admissions@horizoncollege.edu</p>
+
+						<p>⏰ Mon – Sat: 9:00 AM – 4:00 PM</p>
+
+					</div>
+
+				</div>
+
+
+				<!-- Footer Bottom -->
+
+				<div class="footer-bottom">
+
+					<p>
+						© 2026 Horizon College. All Rights Reserved.
+					</p>
+
+				</div>
+
+			</footer>
+
+</body>
+
+</html> 	

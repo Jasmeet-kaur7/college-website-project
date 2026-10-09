@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Horizon College</title>
+
+    <style>
+
+        /* ================= GENERAL ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background-color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 7%;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* Logo */
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 55px;
+            height: 55px;
+
+            background-color: #062b63;
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-area h1 {
+            color: #062b63;
+            font-size: 22px;
+        }
+
+        .logo-area p {
+            font-size: 12px;
+            color: #777;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #062b63;
+        }
+
+
+        /* Apply Button */
+
+        .apply-button {
+            background-color: #062b63;
+            color: white !important;
+
+            padding: 10px 18px;
+
+            border-radius: 5px;
+        }
+
+        .apply-button:hover {
+            background-color: #0b438f;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background-color: #f5f7fa;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            padding: 70px 10%;
+
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: #062b63;
+            font-size: 32px;
+        }
+
+        .line {
+            width: 55px;
+            height: 4px;
+
+            background-color: #d4a72c;
+
+            margin: 12px 0 20px;
+        }
+
+        .about-text p {
+            color: #555;
+
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* About Image */
+
+        .about-image img {
+            width: 100%;
+
+            border-radius: 8px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ================= COMMON BUTTON ================= */
+
+        .button {
+            display: inline-block;
+
+            background-color: #062b63;
+
+            color: white;
+
+            padding: 12px 22px;
+
+            border-radius: 5px;
+
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #0b438f;
+        }
+
+
+        /* ================= APPLY SECTION ================= */
+
+        .apply-section {
+            background-color: #f5f6f8;
+
+            padding: 70px 8%;
+        }
+
+        .apply-container {
+            max-width: 1050px;
+
+            margin: auto;
+        }
+
+        .apply-container > h1 {
+            text-align: center;
+
+            color: #233e66;
+
+            font-size: 32px;
+        }
+
+        .gold-line {
+            width: 50px;
+
+            height: 3px;
+
+            background-color: #c99b32;
+
+            margin: 12px auto 20px;
+        }
+
+        .apply-intro {
+            max-width: 750px;
+
+            margin: auto;
+
+            text-align: center;
+
+            color: #596575;
+
+            line-height: 1.8;
+        }
+
+
+        /* ================= INSTRUCTIONS ================= */
+
+        .instructions {
+            background-color: white;
+
+            margin-top: 40px;
+
+            padding: 35px 40px;
+
+            border: 1px solid #dfe3e8;
+
+            border-radius: 5px;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .instructions h2 {
+            color: #233e66;
+
+            margin-bottom: 15px;
+        }
+
+        .instructions h3 {
+            color: #233e66;
+
+            margin-top: 25px;
+
+            margin-bottom: 10px;
+
+            font-size: 16px;
+        }
+
+        .instructions p,
+        .instructions li {
+            color: #4d5968;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+        .instructions ul {
+            padding-left: 22px;
+        }
+
+
+        /* ================= LOGIN ================= */
+
+        .login-box {
+            width: 450px;
+
+            max-width: 100%;
+
+            margin: 40px auto;
+
+            background-color: white;
+
+            padding: 35px;
+
+            border-radius: 8px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+            text-align: center;
+        }
+
+        .login-box h2 {
+            color: #233e66;
+
+            margin-bottom: 10px;
+        }
+
+        .login-box p {
+            color: #687383;
+
+            font-size: 13px;
+
+            margin-bottom: 25px;
+        }
+
+        .login-box form {
+            text-align: left;
+
+            padding: 0;
+
+            background: transparent;
+        }
+
+        .login-box label,
+        .student-form label {
+            display: block;
+
+            color: #233e66;
+
+            font-weight: bold;
+
+            font-size: 13px;
+
+            margin: 15px 0 7px;
+        }
+
+        .login-box input {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccd3dc;
+
+            border-radius: 5px;
+
+            outline: none;
+        }
+
+        .login-box input:focus {
+            border-color: #233e66;
+        }
+
+        .login-box button,
+        .course-option button {
+            background-color: #233e66;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            padding: 12px 25px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+        }
+
+        .login-box button {
+            width: 100%;
+
+            margin-top: 20px;
+        }
+
+        .login-box button:hover,
+        .course-option button:hover {
+            background-color: #c99b32;
+        }
+
+        .register-text {
+            margin-top: 20px !important;
+        }
+
+        .register-text a {
+            color: #c99b32;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= COURSE CHOICE ================= */
+
+        .course-choice {
+            display: none;
+
+            background-color: white;
+
+            margin-top: 40px;
+
+            padding: 40px;
+
+            border-radius: 8px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .course-choice h2 {
+            color: #233e66;
+        }
+
+        .course-choice > p {
+            color: #687383;
+
+            font-size: 13px;
+
+            margin: 10px 0 30px;
+        }
+
+        .course-options {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+        .course-option {
+            width: 400px;
+
+            padding: 30px;
+
+            border: 1px solid #dfe3e8;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+        }
+
+        .course-option:hover {
+            transform: translateY(-5px);
+
+            box-shadow: 0 7px 20px rgba(0,0,0,0.1);
+        }
+
+        .option-icon {
+            font-size: 40px;
+
+            margin-bottom: 12px;
+        }
+
+        .course-option h3 {
+            color: #233e66;
+
+            margin-bottom: 12px;
+        }
+
+        .course-option p {
+            color: #687383;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+        }
+
+        .course-option button {
+            font-size: 12px;
+        }
+
+
+        /* ================= STUDENT FORM ================= */
+
+        .student-form {
+            display: none;
+
+            margin-top: 40px;
+
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 8px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .student-form h2 {
+            color: #233e66;
+
+            margin-bottom: 8px;
+        }
+
+        .selected-course {
+            color: #596575;
+
+            font-size: 13px;
+
+            margin-bottom: 25px;
+        }
+
+        .selected-course strong {
+            color: #c99b32;
+        }
+
+
+        /* ================= FORM HEADINGS ================= */
+
+        .form-heading {
+            background-color: #233e66;
+
+            color: white;
+
+            padding: 12px 15px;
+
+            margin-top: 30px;
+
+            border-left: 5px solid #c99b32;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= FORM ROW ================= */
+
+        .form-row {
+            display: flex;
+
+            gap: 25px;
+        }
+
+        .form-row > div {
+            flex: 1;
+        }
+
+
+        /* ================= INPUTS ================= */
+
+        .student-form input,
+        .student-form select,
+        .student-form textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccd3dc;
+
+            border-radius: 5px;
+
+            outline: none;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            background-color: white;
+        }
+
+        .student-form input:focus,
+        .student-form select:focus,
+        .student-form textarea:focus {
+            border-color: #233e66;
+        }
+
+        .student-form textarea {
+            resize: vertical;
+        }
+
+
+        /* ================= FILE INPUT ================= */
+
+        .student-form input[type="file"] {
+            background-color: #f5f6f8;
+
+            padding: 10px;
+        }
+
+
+        /* ================= DECLARATION ================= */
+
+        .declaration {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            margin-top: 30px;
+
+            padding: 15px;
+
+            background-color: #f5f6f8;
+
+            font-size: 13px;
+
+            color: #596575;
+        }
+
+        .declaration input {
+            width: auto;
+
+            margin-top: 3px;
+        }
+
+
+        /* ================= SUBMIT ================= */
+
+        .submit-btn {
+            display: block;
+
+            margin: 30px auto 0;
+
+            padding: 14px 35px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            background-color: #233e66;
+
+            color: white;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #c99b32;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            .apply-section {
+                padding: 50px 20px;
+            }
+
+            .instructions,
+            .student-form,
+            .course-choice {
+                padding: 25px;
+            }
+
+            .form-row {
+                flex-direction: column;
+
+                gap: 0;
+            }
+
+            .course-option {
+                width: 100%;
+            }
+
+            .login-box {
+                width: 100%;
+            }
+
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            width: 100%;
+
+            background-color: #062b63;
+
+            color: white;
+        }
+
+        .footer-container {
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 50px 7%;
+
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+
+            gap: 40px;
+        }
+
+        .footer-column h2 {
+            font-size: 22px;
+
+            margin-bottom: 15px;
+        }
+
+        .footer-column h3 {
+            font-size: 17px;
+
+            margin-bottom: 18px;
+        }
+
+        .footer-column p {
+            color: #d8e2f0;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            margin-bottom: 8px;
+        }
+
+        .footer-column a {
+            display: block;
+
+            color: #d8e2f0;
+
+            font-size: 13px;
+
+            margin-bottom: 12px;
+
+            transition: 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: #d4a72c;
+        }
+
+        .footer-bottom {
+            width: 100%;
+
+            background-color: #041e46;
+
+            text-align: center;
+
+            padding: 15px;
+
+            font-size: 13px;
+
+            color: #d8e2f0;
+        }
+
+
+        /* ================= FOOTER RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+
+                gap: 30px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo-area">
+
+            <div class="logo">
+                HC
+            </div>
+
+            <div>
+
+                <h1>HORIZON COLLEGE</h1>
+
+                <p>
+                    Arts • Science • Commerce
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="sign in.html">
+                Sign In
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="Forget Password.html">
+                Forget Password
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= APPLY SECTION ================= -->
+
+    <section class="apply-section" id="apply">
+
+        <div class="apply-container">
+
+
+            <h1>
+                Online Admission Portal
+            </h1>
+
+            <div class="gold-line"></div>
+
+
+            <p class="apply-intro">
+
+                Welcome to the Horizon College Online Admission Portal.
+
+                Please read the instructions carefully before starting
+                your application.
+
+            </p>
+
+
+
+            <!-- ================= INSTRUCTIONS ================= -->
+
+            <div class="instructions">
+
+                <h2>
+                    Admission Instructions
+                </h2>
+
+
+                <p>
+
+                    Applicants are required to register before filling
+                    the admission form.
+
+                    Please make sure that the
+                    information provided during registration is correct.
+
+                </p>
+
+
+                <h3>
+                    New Applicant
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Students applying for admission for the first
+                        time should register as a new applicant.
+                    </li>
+
+                    <li>
+                        Use a valid mobile number and email address
+                        during registration.
+                    </li>
+
+                    <li>
+                        Keep your academic information ready before
+                        starting the application.
+                    </li>
+
+                </ul>
+
+
+
+                <h3>
+                    Already Registered Applicant
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Students who have already registered can sign
+                        in using their registered email and password.
+                    </li>
+
+                    <li>
+                        Do not create another account if you have
+                        already registered.
+                    </li>
+
+                </ul>
+
+
+
+                <h3>
+                    Important Information
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Fill all information carefully.
+                    </li>
+
+                    <li>
+                        Select the correct course.
+                    </li>
+
+                    <li>
+                        Check your information before submitting.
+                    </li>
+
+                    <li>
+                        Keep your application details safe.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ================= SIGN IN ================= -->
+
+            <div class="login-box">
+
+                <h2>
+                    Already Registered?
+                </h2>
+
+
+                <p>
+
+                    If you have already registered, sign in to continue
+                    your admission application.
+
+                </p>
+
+
+                <a href="sign in.html" class="signin-btn">
+
+                    Sign In
+
+                </a>
+
+
+                <p class="register-text">
+
+                    New applicant?
+
+                    <a href="register.html">
+                        Register Here
+                    </a>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FULL FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <!-- College Information -->
+
+            <div class="footer-column">
+
+                <h2>
+                    HORIZON COLLEGE
+                </h2>
+
+                <p>
+                    Empowering Minds, Shaping Futures
+                </p>
+
+                <p>
+                    Horizon College is committed to providing quality
+                    education and creating opportunities for students
+                    to build a successful future.
+                </p>
+
+            </div>
+
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="courses.html">
+                    Courses
+                </a>
+
+                <a href="admissions.html">
+                    Admissions
+                </a>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+            </div>
+
+
+
+            <!-- Admissions -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Admissions
+                </h3>
+
+                <a href="apply.html">
+                    Apply Now
+                </a>
+
+                <a href="sign in.html">
+                    Student Sign In
+                </a>
+
+                <a href="register.html">
+                    New Registration
+                </a>
+
+                <a href="Forget Password.html">
+                    Forgot Password
+                </a>
+
+            </div>
+
+
+
+            <!-- Contact Information -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    📍 123 Academic Hub Street
+                </p>
+
+                <p>
+                    Knowledge Enclave, Punjab, India
+                </p>
+
+                <p>
+                    📞 +91 98765 43210
+                </p>
+
+                <p>
+                    ✉ admissions@horizoncollege.edu
+                </p>
+
+                <p>
+                    ⏰ Mon – Sat: 9:00 AM – 4:00 PM
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Horizon College. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

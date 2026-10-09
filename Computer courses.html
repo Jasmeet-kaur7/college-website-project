@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Horizon College</title>
+<style>
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 7%;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Logo */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+
+    background-color: #062b63;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-area h1 {
+    color: #062b63;
+    font-size: 22px;
+}
+
+.logo-area p {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #062b63;
+}
+
+
+/* Apply Button */
+
+.apply-button {
+    background-color: #062b63;
+    color: white !important;
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+}
+
+.apply-button:hover {
+    background-color: #0b438f;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    background-color: #f5f7fa;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    padding: 70px 10%;
+
+    align-items: center;
+}
+
+.about-text h2 {
+    color: #062b63;
+    font-size: 32px;
+}
+
+.line {
+    width: 55px;
+    height: 4px;
+
+    background-color: #d4a72c;
+
+    margin: 12px 0 20px;
+}
+
+.about-text p {
+    color: #555;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* About Image */
+
+.about-image img {
+    width: 100%;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Common Button */
+
+.button {
+    display: inline-block;
+
+    background-color: #062b63;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 5px;
+
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #0b438f;
+}
+
+/* ================= COURSES ================= */
+
+.courses {
+    text-align: center;
+
+    padding: 70px 7%;
+}
+
+.courses h2 {
+    color: #062b63;
+    font-size: 32px;
+}
+
+.course-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+
+.course-card {
+    border: 1px solid #ddd;
+
+    padding: 30px 20px;
+
+    border-radius: 8px;
+
+    background-color: white;
+
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.course-card h3 {
+    color: #062b63;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+.course-card a {
+    color: #062b63;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    width: 100%;
+    background-color: #062b63;
+    color: white;
+}
+
+
+/* Footer Main Area */
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 50px 7%;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+
+    gap: 40px;
+}
+
+
+/* Footer Columns */
+
+.footer-column h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer-column h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.footer-column p {
+    color: #d8e2f0;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+
+/* Footer Links */
+
+.footer-column a {
+    display: block;
+
+    color: #d8e2f0;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: #d4a72c;
+}
+
+
+/* Footer Bottom */
+
+.footer-bottom {
+    width: 100%;
+
+    background-color: #041e46;
+
+    text-align: center;
+
+    padding: 15px;
+
+    font-size: 13px;
+
+    color: #d8e2f0;
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about,
+    .notices {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo-area">
+
+            <div class="logo">
+                HC
+            </div>
+
+            <div>
+                <h1>HORIZON COLLEGE</h1>
+                <p>Arts • Science • Commerce</p>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation Bar -->
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="admissions.html" class="apply-button">
+                Apply Now
+            </a>
+
+        </nav>
+
+    </header>
+    <!-- ================= MAIN CONTENT ================= -->	
+	
+        <!-- BCA Course Overview Section -->
+        <section class="about">
+            <div class="about-text">
+                <h2>Post Graduate Diploma in Computer Applications (PGDCA)</h2>
+                <div class="line"></div>
+                <p>
+                    Our PGDCA program is an intensive postgraduate diploma designed to bridge the technical gap for graduates from any stream looking to enter the IT and software industry. This professional program provides a comprehensive background in modern computer software application tracks, coding architectures, data engineering, and business systems automation to build rapid, job-ready technology skills.
+                </p>
+                <p>
+                    <strong>Duration:</strong> 1 Year (2 Semesters)<br>
+                    <strong>Eligibility:</strong> Graduation / Bachelor's Degree in any discipline from a recognized university (Mathematics at 10+2 or degree level preferred but not mandatory).
+                </p>
+                <a href="admissions.html" class="button">Enroll in PGDCA</a>
+            </div>
+            
+            <div class="about-image">
+                <!-- Replace with an actual image link later -->
+                <img src="images/logo.png" alt="Horizon College Campus">
+            </div>
+        </section>
+
+        <!-- BA Specializations Section (Uses your 4-column grid layout) -->
+        <section class="courses">
+            <h2>Available Specializations</h2>
+            <div class="line" style="margin: 12px auto 30px;"></div>
+            
+            <div class="course-container">
+                
+                <!-- Card 1: Information Technology Fundamentals -->
+                <div class="course-card">
+                    <h3>FIT</h3>
+                    <p><strong>IT Fundamentals</strong></p>
+                    <p>Understand computer organization architecture, operating system baselines, hardware concepts, and digital software suites.</p>
+                </div>
+
+                <!-- Card 2: Programming Concepts with C -->
+                <div class="course-card">
+                    <h3>PFC</h3>
+                    <p><strong>C Programming</strong></p>
+                    <p>Master core programming logic, structured problem-solving methodologies, algorithm arrays, and code execution.</p>
+                </div>
+
+                <!-- Card 3: Database Management Systems -->
+                <div class="course-card">
+                    <h3>DMS</h3>
+                    <p><strong>Database Management</strong></p>
+                    <p>Learn relational database models, data normalization rules, security parameters, and structured query writing.</p>
+                </div>
+
+                <!-- Card 4: Web Design Frameworks -->
+                <div class="course-card">
+                    <h3>WDT</h3>
+                    <p><strong>Web Technologies</strong></p>
+                    <p>Build responsive front-end site scripts using semantic HTML5 code blocks, structured CSS3 sheets, and script frameworks.</p>
+                </div>
+            </div>
+			<div class="course-container" style="margin-top: 25px;">
+			     <!-- Card 5: Object Oriented Programming with Java -->
+                <div class="course-card">
+                    <h3>OOP</h3>
+                    <p><strong>Object Oriented Java</strong></p>
+                    <p>Explore object-oriented paradigms, code inheritance patterns, polymorphism loops, and custom application setups.</p>
+                </div>
+
+                <!-- Card 6: Networks & Data Communication -->
+                <div class="course-card">
+                    <h3>DCN</h3>
+                    <p><strong>Data Communication</strong></p>
+                    <p>Examine layered connection parameters, network routing configurations, internet topology grids, and safety protocols.</p>
+                </div>
+
+                <!-- Card 7: Business Systems & ERP -->
+                <div class="course-card">
+                    <h3>OAT</h3>
+                    <p><strong>Office Automation</strong></p>
+                    <p>Implement enterprise tools including data tracking sheets, automated documents, accounting scripts, and corporate workflows.</p>
+                </div>
+
+                <!-- Card 8: Advanced Rapid Scripting -->
+                <div class="course-card">
+                    <h3>PYT</h3>
+                    <p><strong>Python Programming</strong></p>
+                    <p>Leverage rapid prototyping modules, object automation configurations, database pipelines, and basic AI interface tools.</p>
+                </div>
+            </div>
+        </section>
+
+		<div style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
+    <ul style="list-style-type: none; padding: 0;">
+        <li>
+            <a href="courses.html" style="text-decoration: none; color: blue; font-weight: bold; font-size: 20px;">
+                < BACK >
+            </a>
+        </li>
+    </ul>
+</div>
+
+	
+<!-- =================  FOOTER ================= -->
+
+			<footer>
+
+				<div class="footer-container">
+
+					<!-- College Information -->
+
+					<div class="footer-column">
+
+						<h2>HORIZON COLLEGE</h2>
+
+						<p>
+							Empowering Minds, Shaping Futures
+						</p>
+
+						<p>
+							Horizon College is committed to providing quality
+							education and creating opportunities for students
+							to build a successful future.
+						</p>
+
+					</div>
+
+
+					<!-- Quick Links -->
+
+					<div class="footer-column">
+
+						<h3>Quick Links</h3>
+
+						<a href="index.html">Home</a>
+
+						<a href="about.html">About Us</a>
+
+						<a href="courses.html">Courses</a>
+
+						<a href="admissions.html">Admissions</a>
+
+						<a href="contact.html">Contact Us</a>
+
+					</div>
+
+
+					<!-- Admission Links -->
+
+					<div class="footer-column">
+
+						<h3>Admissions</h3>
+
+						<a href="apply.html">Apply Now</a>
+
+						<a href="sign in.html">Student Sign In</a>
+
+						<a href="register.html">New Registration</a>
+
+						<a href="Forget Password.html">Forgot Password</a>
+
+					</div>
+
+
+					<!-- Contact Information -->
+
+					<div class="footer-column">
+
+						<h3>Contact Us</h3>
+
+						<p>📍 123 Academic Hub Street</p>
+
+						<p>Knowledge Enclave, Punjab, India</p>
+
+						<p>📞 +91 98765 43210</p>
+
+						<p>✉ admissions@horizoncollege.edu</p>
+
+						<p>⏰ Mon – Sat: 9:00 AM – 4:00 PM</p>
+
+					</div>
+
+				</div>
+
+
+				<!-- Footer Bottom -->
+
+				<div class="footer-bottom">
+
+					<p>
+						© 2026 Horizon College. All Rights Reserved.
+					</p>
+
+				</div>
+
+			</footer>
+
+</body>
+
+</html> 
+  

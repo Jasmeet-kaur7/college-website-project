@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Application Submitted - Horizon College</title>
+
+
+    <style>
+
+        /* ================= GENERAL ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background-color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 15px 7%;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* ================= LOGO ================= */
+
+        .logo-area {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+        .logo {
+            width: 55px;
+
+            height: 55px;
+
+            background-color: #062b63;
+
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 20px;
+
+            font-weight: bold;
+        }
+
+        .logo-area h1 {
+            color: #062b63;
+
+            font-size: 22px;
+        }
+
+        .logo-area p {
+            font-size: 12px;
+
+            color: #777;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+        }
+
+        nav a {
+            color: #333;
+
+            font-size: 14px;
+
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #062b63;
+        }
+
+
+        /* ================= SUCCESS SECTION ================= */
+
+        .success-section {
+
+            min-height: 600px;
+
+            background-color: #f5f7fa;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 60px 20px;
+        }
+
+
+        /* ================= SUCCESS BOX ================= */
+
+        .success-box {
+
+            width: 600px;
+
+            background-color: white;
+
+            padding: 50px 40px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+        }
+
+
+        /* Success Icon */
+
+        .success-icon {
+
+            width: 80px;
+
+            height: 80px;
+
+            margin: 0 auto 25px;
+
+            background-color: #062b63;
+
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 40px;
+
+            font-weight: bold;
+        }
+
+
+        /* Heading */
+
+        .success-box h2 {
+
+            color: #062b63;
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* Message */
+
+        .success-box p {
+
+            color: #666;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* Application Number */
+
+        .application-number {
+
+            background-color: #f5f7fa;
+
+            border: 1px solid #e0e5eb;
+
+            padding: 15px;
+
+            margin: 25px 0;
+
+            border-radius: 6px;
+        }
+
+        .application-number span {
+
+            display: block;
+
+            color: #666;
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+        }
+
+        .application-number strong {
+
+            color: #062b63;
+
+            font-size: 20px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* Home Button */
+
+        .home-button {
+
+            display: inline-block;
+
+            background-color: #062b63;
+
+            color: white;
+
+            padding: 12px 30px;
+
+            border-radius: 5px;
+
+            font-size: 14px;
+
+            margin-top: 10px;
+
+            transition: 0.3s;
+        }
+
+        .home-button:hover {
+
+            background-color: #0b438f;
+        }
+
+/* ================= FOOTER ================= */
+
+footer {
+    width: 100%;
+    background-color: #062b63;
+    color: white;
+}
+
+
+/* Footer Main Area */
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 50px 7%;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+
+    gap: 40px;
+}
+
+
+/* Footer Columns */
+
+.footer-column h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer-column h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.footer-column p {
+    color: #d8e2f0;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+
+/* Footer Links */
+
+.footer-column a {
+    display: block;
+
+    color: #d8e2f0;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: #d4a72c;
+}
+
+
+/* Footer Bottom */
+
+.footer-bottom {
+    width: 100%;
+
+    background-color: #041e46;
+
+    text-align: center;
+
+    padding: 15px;
+
+    font-size: 13px;
+
+    color: #d8e2f0;
+}
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 20px;
+            }
+
+            nav {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav {
+
+                gap: 12px;
+            }
+
+            nav a {
+
+                font-size: 12px;
+            }
+
+            .success-box {
+
+                padding: 35px 20px;
+            }
+
+            .success-box h2 {
+
+                font-size: 25px;
+            }
+
+            .success-icon {
+
+                width: 70px;
+
+                height: 70px;
+
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo-area">
+
+            <div class="logo">
+                HC
+            </div>
+
+            <div>
+
+                <h1>HORIZON COLLEGE</h1>
+
+                <p>Arts • Science • Commerce</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="sign in.html">Sign In</a>
+
+            <a href="register.html">Register</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="Forget Password.html">Forget Password</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main>
+
+        <section class="success-section">
+
+            <div class="success-box">
+
+
+                <!-- Success Icon -->
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+
+                <!-- Heading -->
+
+                <h2>
+                    Application Submitted Successfully!
+                </h2>
+
+
+                <p>
+                    Thank you for applying to
+                    <strong>Horizon College</strong>.
+                </p>
+
+                <p>
+                    Your admission application has been
+                    successfully submitted.
+                    Our admission team will review your
+                    application and contact you soon.
+                </p>
+
+
+                <!-- Application Number -->
+
+                <div class="application-number">
+
+                    <span>
+                        Your Application Number
+                    </span>
+
+                    <strong>
+                        HC2026-002
+                    </strong>
+
+                </div>
+
+
+                <p>
+                    Please keep your application number
+                    safe for future reference.
+                </p>
+
+
+                <!-- Home Button -->
+
+                <a href="index.html" class="home-button">
+                    Back to Home
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+<!-- =================  FOOTER ================= -->
+
+			<footer>
+
+				<div class="footer-container">
+
+					<!-- College Information -->
+
+					<div class="footer-column">
+
+						<h2>HORIZON COLLEGE</h2>
+
+						<p>
+							Empowering Minds, Shaping Futures
+						</p>
+
+						<p>
+							Horizon College is committed to providing quality
+							education and creating opportunities for students
+							to build a successful future.
+						</p>
+
+					</div>
+
+
+					<!-- Quick Links -->
+
+					<div class="footer-column">
+
+						<h3>Quick Links</h3>
+
+						<a href="index.html">Home</a>
+
+						<a href="about.html">About Us</a>
+
+						<a href="courses.html">Courses</a>
+
+						<a href="admissions.html">Admissions</a>
+
+						<a href="contact.html">Contact Us</a>
+
+					</div>
+
+
+					<!-- Admission Links -->
+
+					<div class="footer-column">
+
+						<h3>Admissions</h3>
+
+						<a href="apply.html">Apply Now</a>
+
+						<a href="sign in.html">Student Sign In</a>
+
+						<a href="register.html">New Registration</a>
+
+						<a href="Forget Password.html">Forgot Password</a>
+
+					</div>
+
+
+					<!-- Contact Information -->
+
+					<div class="footer-column">
+
+						<h3>Contact Us</h3>
+
+						<p>📍 123 Academic Hub Street</p>
+
+						<p>Knowledge Enclave, Punjab, India</p>
+
+						<p>📞 +91 98765 43210</p>
+
+						<p>✉ admissions@horizoncollege.edu</p>
+
+						<p>⏰ Mon – Sat: 9:00 AM – 4:00 PM</p>
+
+					</div>
+
+				</div>
+
+
+				<!-- Footer Bottom -->
+
+				<div class="footer-bottom">
+
+					<p>
+						© 2026 Horizon College. All Rights Reserved.
+					</p>
+
+				</div>
+
+			</footer>
+
+
+</body>
+
+</html>
